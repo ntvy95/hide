@@ -1,0 +1,9 @@
+services:
+    koutogima.hide.listener:
+        class: koutogima\hide\event\listener
+        arguments:
+            - @user
+            - @template
+            - @dbal.conn
+        tags:
+            - { name: event.listener }

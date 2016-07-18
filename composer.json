@@ -1,0 +1,25 @@
+{
+   "name": "koutogima/hide",
+   "type": "phpbb-extension",
+   "description": "[hide=<user 1 id>, <user 2 id> | <group 1 id>, <groupd 2 id>]The content only user 1, user 2 and members of group 1 or group 2 can view[/hide]. Based on Marco van Oort's work for hide bbcode, which you can find here: https://github.com/marcovo/phpbb_hidebbcode.",
+   "homepage": "",
+   "version": "1.0.0",
+   "license": "GPL-2.0",
+   "authors": [
+      {
+         "name": "koutogima",
+         "email": "",
+         "homepage": "",
+         "role": ""
+      }
+   ],
+   "require": {
+      "php": ">=5.3.3"
+   },
+   "extra": {
+      "display-name": "HIDE BBCode",
+      "soft-require": {
+         "phpbb/phpbb": ">=3.1.4,<3.2.*@dev"
+      }
+   }
+}
