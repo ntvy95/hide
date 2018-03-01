@@ -5,7 +5,7 @@ Last update: Jul 18, 2016.
 
 A phpBB extension: HIDE BBCode. Based on [marcovo Hide BBcode](https://www.phpbb.com/community/viewtopic.php?t=2279486).
 
-Tested on phpBB 3.1.4.
+Tested on phpBB 3.1.9.
 
 # Syntax
 
