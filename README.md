@@ -30,4 +30,4 @@ Tested on phpBB 3.1.4.
 
 Poster always has the permission to view the hidden content in his / her own post. Users have the right to edit a post still can see the hidden content through editing the post.
 
-The BBCode is still named "hide" for my own forum's purpose. If you want to change the BBCode tag name for compatibility with marcovo's work, just go ahead and edit [event/listener.php](event/listener.php).
+The BBCode is still named "hide" for my own forum's purpose. If you want to change the BBCode tag name for compatibility with marcovo's work, just go ahead and edit [event/listener.php at lines 189 and 190](event/listener.php#L189).
