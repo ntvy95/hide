@@ -1,5 +1,5 @@
 services:
-    koutogima.hide.listener:
+    ntvy95.hide.listener:
         class: ntvy95\hide\event\listener
         arguments:
             - @user
