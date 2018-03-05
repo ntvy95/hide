@@ -161,9 +161,19 @@ class listener implements EventSubscriberInterface
 	}
 	
 	public function modify_posting_parameters($event) {
+		/*
 		$sql = 'SELECT poster_id
 			FROM ' . POSTS_TABLE . '
 			WHERE post_id = ' . $event['post_id'];
+		*/
+		
+		$sql_array = array(
+		    'SELECT'    =>  'poster_id',
+		    'FROM'      =>  POSTS_TABLE,
+		    'WHERE'     =>  'post_id = ' . $event['post_id'],
+		);
+
+		$sql = $db->sql_build_query('SELECT', $sql_array);
 		$result = $this->db->sql_query($sql);
 		$this->current_row['user_id'] = (int) $this->db->sql_fetchfield('poster_id');
 		$this->db->sql_freeresult($result);
