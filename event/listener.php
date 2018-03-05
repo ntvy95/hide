@@ -7,17 +7,17 @@
 *
 */
 
-if (!defined('IN_PHPBB'))
-{
-   exit;
-}
-
 namespace ntvy95\hide\event;
 
 /**
 * @ignore
 */
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+if (!defined('IN_PHPBB'))
+{
+   exit;
+}
 
 /**
 * Event listener
