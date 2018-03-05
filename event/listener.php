@@ -69,7 +69,7 @@ class listener implements EventSubscriberInterface
 	{
 		$lang_set_ext = $event['lang_set_ext'];
 		$lang_set_ext[] = array(
-			'ext_name' => 'koutogima/hide',
+			'ext_name' => 'ntvy95/hide',
 			'lang_set' => 'hide_bbcode',
 		);
 		$event['lang_set_ext'] = $lang_set_ext;
@@ -214,7 +214,7 @@ class listener implements EventSubscriberInterface
 			//var_dump($matches);
 			//var_dump($open_matches);
 			if(!$decoded) {
-				$this->template->set_style(array('styles', 'ext/koutogima/hide/styles'));
+				$this->template->set_style(array('styles', 'ext/ntvy95/hide/styles'));
 				$bbcode = new \bbcode();
 				$bbcode->template_filename = $this->template->get_source_file_for_handle('hide_bbcode.html');
 				$unhide_open = $bbcode->bbcode_tpl('unhide_open');
