@@ -7,6 +7,11 @@
 *
 */
 
+if (!defined('IN_PHPBB'))
+{
+   exit;
+}
+
 namespace ntvy95\hide\event;
 
 /**
