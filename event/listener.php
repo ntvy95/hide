@@ -2,12 +2,12 @@
 /** 
 *
 * @package Hide_BBcode
-* @copyright (c) 2016 Kou Togima based on Marco van Oort's work
+* @copyright (c) 2016 ntvy95 based on Marco van Oort's work
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License v2 
 *
 */
 
-namespace koutogima\hide\event;
+namespace ntvy95\hide\event;
 
 /**
 * @ignore
