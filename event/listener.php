@@ -27,13 +27,13 @@ class listener implements EventSubscriberInterface
 	protected $iterator;
 	protected $end;
 	protected $decoded;
-	protected $is_quoted;
 
 	public function __construct(\phpbb\user $user, \phpbb\template\template $template, \phpbb\db\driver\driver_interface $db)
 	{
 		$this->user = $user;
 		$this->template = $template;
 		$this->db = $db;
+		$this->is_editing = false;
 	}
 
 	static public function getSubscribedEvents()
@@ -150,7 +150,8 @@ class listener implements EventSubscriberInterface
 		}
 		$text = $event['message_text'];
 		if(isset($this->current_row['user_id'])) {
-			if($this->user->data['user_id'] != $this->current_row['user_id']) {
+			if($this->user->data['user_id'] != $this->current_row['user_id']
+			&& !$this->is_editing) {
 				$this->replace_hide_bbcode_wrapper($this->current_row['user_id'], $event['bbcode_uid'], $text, true);
 			}
 		}
@@ -175,6 +176,7 @@ class listener implements EventSubscriberInterface
 		$result = $this->db->sql_query($sql);
 		$this->current_row['user_id'] = (int) $this->db->sql_fetchfield('poster_id');
 		$this->db->sql_freeresult($result);
+		$this->is_editing = ($event['mode'] == 'edit');
 	}
 
 	public function iterate() {
